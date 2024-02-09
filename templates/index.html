@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fish Prediction</title>
+</head>
+<body>
+    <h1>Fish Prediction</h1>
+
+    <form action="/predict" method="post">
+        <label for="ammonia">Ammonia:</label><br>
+        <input type="text" id="ammonia" name="Ammonia"><br>
+        <label for="nitrite">Nitrite:</label><br>
+        <input type="text" id="nitrite" name="Nitrite"><br>
+        <label for="nitrate">Nitrate:</label><br>
+        <input type="text" id="nitrate" name="Nitrate"><br>
+        <label for="temperature">Temperature:</label><br>
+        <input type="text" id="temperature" name="temperature"><br>
+        <label for="humidity">Humidity:</label><br>
+        <input type="text" id="humidity" name="humidity"><br>
+        <label for="ph">pH:</label><br>
+        <input type="text" id="ph" name="ph"><br>
+        <label for="rainfall">Rainfall:</label><br>
+        <input type="text" id="rainfall" name="rainfall"><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
