@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .scrollbar::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+      display: flex;
+    }
+    .scrollbar::-webkit-scrollbar-track {
+      border-radius: 100vh;
+      /* background: #FFFFFF; */
+      opacity: 0;
+    }
+    .scrollbar::-webkit-scrollbar-thumb {
+      background: #555555;
+      border-radius: 100vh;
+      border: 1px solid #555555;
+    }
+  }
+  
+  @layer utilities {
+    .scrollbar-hidden::-webkit-scrollbar {
+      width: 1px;
+      height: 0px;
+    }
+    .scrollbar-hidden::-webkit-scrollbar-track {
+      border-radius: 100vh;
+      /* background: #FFFFFF; */
+      opacity: 0;
+    }
+    .scrollbar-hidden::-webkit-scrollbar-thumb {
+      background: #555555;
+      border-radius: 100vh;
+      border: 1px solid #555555;
+    }
+  }
+  
+  @layer base {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
